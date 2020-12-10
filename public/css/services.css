@@ -1,0 +1,89 @@
+header{
+    background-color: #070c91;
+}
+
+header button{
+    color: white;
+    background-color: #070c91;
+    border: #070c91;
+    margin-top: 5px;
+}
+
+header button:hover{
+    color: #1ec5e8;
+}
+header select{
+    background-color: #070c91;
+    color: white;
+    border-color: #070c91;
+    margin-top: 5px;
+    font-size: 14px;
+}
+header select:hover{
+    border-color: #1ec5e8;
+    cursor: pointer;
+}
+#section1 a{
+    background-color: white;
+    color: #a21a08;
+}
+#section1 .link-to-home-page{
+    margin-top: 2%;
+    font-size: 20px;
+}
+#section1 label{
+    display: block;
+    color: #1ec5e8;
+}
+#section1 .phonenumbericon{
+    font-size: 43px;
+    margin-top: -10%;
+    color: #1ec5e8;
+}
+#section2{
+    height: 500px;
+    background-image: url("../assets/img/freezerTopPagejpg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.feature-items{
+    margin-top:50%;
+}
+.feature-items ul{
+    list-style-type: none;
+    color: white;
+    background-color: darkgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.feature-items li{
+    margin: 20px 0;
+}
+.feature-item-li{
+    border-bottom: 1px solid white;
+    flex-grow: 1;
+    flex-basis: auto;
+    padding-bottom: 10px;
+}
+.callback{
+    color:white;
+    background-color: darkgray
+}
+.emailicon{
+    font-size: 40px;
+    margin-left: 40%;
+    color: #1ec5e8;
+}
+.emailtext a{
+    color: #1ec5e8;
+}
+#section4 img{
+    border:1px solid black;
+    width: 22%;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 30px;
+}
+#section4 h4{
+    color: #1ec5e8;
+}
