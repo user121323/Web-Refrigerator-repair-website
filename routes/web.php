@@ -44,20 +44,6 @@ Route::middleware(['set_locale'])->group(function(){
         $current_locale = \Illuminate\Support\Facades\DB::table("languages")->where("code","=",$current_lang)->first();
         return view('user.contacts',compact('languages','current_locale','styles'));
     });
-    Route::get("/about",function (){
-
-        $current_lang = session('locale');
-
-        if ($current_lang==null){
-            $loc = 'en';
-            return redirect()->route('locale',compact("loc"));
-        }
-
-        $languages = \Illuminate\Support\Facades\DB::table("languages")->where("code","!=",$current_lang)->get();
-        $current_locale = \Illuminate\Support\Facades\DB::table("languages")->where("code","=",$current_lang)->first();
-
-        return view('user.abouts',compact('languages','current_locale'));
-    });
     Route::get('/feedback', function () {
         $current_lang = session('locale');
 
@@ -96,7 +82,7 @@ Route::middleware(['set_locale'])->group(function(){
 
     Route::post("/login","App\Http\Controllers\AccountController@login");
 
-    Route::get("/logout","App\Http\Controllers\AccountController@logout");
+    Route::post("/logout","App\Http\Controllers\AccountController@logout");
 
     Route::post("/editfullname","App\Http\Controllers\AccountController@editFullname");
 
