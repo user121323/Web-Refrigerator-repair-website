@@ -12,5 +12,6 @@ return [
     'alert_success'=>"Success",
     'alert_invalidoldpasswrod'=>"Invalid Old Password",
     'alert_newpasswordsnotmatch'=>"New Passwords not match",
+    "label_profule" => "Profile",
 
 ];

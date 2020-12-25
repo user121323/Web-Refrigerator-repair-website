@@ -35,6 +35,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-10 offset-1">
+                    <div class="mb-5">
+                        <h3>{{ __("profile.label_profule") }}</h3>
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">{{ __("profile.label_fullname") }}</label>
                         <div class="d-flex">

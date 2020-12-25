@@ -12,5 +12,6 @@ return [
     'alert_success'=>"Жетістік",
     'alert_invalidoldpasswrod'=>"Қате Ескі Пароль",
     'alert_newpasswordsnotmatch'=>"Жаңа парольдер сәйкес келмейді",
+    "label_profule" => "Профиль",
 
 ];

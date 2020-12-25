@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8d5741-6a53-45c1-b97c-2ba36691684c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/kz/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/kz/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/kz/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/kz/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/adminmaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/adminmaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,12 +202,24 @@
       <workItem from="1608493473416" duration="630000" />
       <workItem from="1608796410789" duration="14614000" />
       <workItem from="1608827632590" duration="1668000" />
-      <workItem from="1608873597984" duration="4886000" />
+      <workItem from="1608873597984" duration="8015000" />
     </task>
+    <task id="LOCAL-00001" summary="final">
+      <created>1608882744487</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608882744487</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607535803417">
@@ -213,10 +230,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607536570769" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1608882743450">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1608882743450" />
     <state x="517" y="287" key="NewPhpFileDialog" timestamp="1606647929414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1606647929414" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1608887570687">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608887570687" />
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608887573622">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608887573622" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1608881948004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

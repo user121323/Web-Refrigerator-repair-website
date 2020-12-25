@@ -42,10 +42,10 @@
 <body>
 <nav class="site-header sticky-top py-1">
     <div class="container d-flex flex-column flex-md-row justify-content-center">
-        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/users">Users</a>
-        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/services">Services</a>
-        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/applications">Applications</a>
-        <a class="py-2 d-none d-md-inline-block mr-5" href="/">Home Page</a>
+        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/users" style="color: white">Users</a>
+        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/services" style="color: white">Services</a>
+        <a class="py-2 d-none d-md-inline-block mr-5" href="/admin/applications" style="color: white">Applications</a>
+        <a class="py-2 d-none d-md-inline-block mr-5" href="/" style="color: white">Home Page</a>
     </div>
 </nav>
 
