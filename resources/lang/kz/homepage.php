@@ -8,7 +8,8 @@ return[
     'header_feedback'=>'Пікір',
     'header_logout'=>'шығу',
     'header_send_request'=>'Өтінімді Жіберу',
-    'header_adminpage'=>"Admin Page",
+    'header_adminpage'=>"Администратор Парақшасы",
+    'header_profile'=>"Профиль",
 
     'btn_login'=>'Кіру',
     'btn_authorization'=>'Авторландыру',

@@ -7,4 +7,5 @@ return [
     'label_saturday'=>"Сенбі:",
     'label_sunday'=>"Жексенбі:",
     'label_weekend'=>"демалыс",
+    'btn_sendapplication' => "Заяка жіберу",
 ];

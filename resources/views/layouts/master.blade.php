@@ -32,35 +32,37 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <ul class="nav">
+            <div class="col-sm-10 col-md-9">
+                <ul class="nav" style="margin-left: -10%">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">{{__('homepage.header_main')}}</a>
+                        <a class="nav-link" href="/" style="color: white">{{__('homepage.header_main')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/services">{{__('homepage.header_service')}}</a>
+                        <a class="nav-link" href="/services" style="color: white">{{__('homepage.header_service')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contacts">{{__('homepage.header_contacts')}}</a>
+                        <a class="nav-link" href="/contacts" style="color: white">{{__('homepage.header_contacts')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{__('homepage.header_aboutus')}}</a>
+                        <a class="nav-link" href="/feedback" style="color: white">{{__('homepage.header_feedback')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/feedback">{{__('homepage.header_feedback')}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/sendrequest">{{__('homepage.header_send_request')}}</a>
+                        <a class="nav-link" href="/sendrequest" style="color: white">{{__('homepage.header_send_request')}}</a>
                     </li>
                     @if(session()->exists('user') && session()->get("user")->isadmin==1)
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin">{{__('homepage.header_adminpage')}}</a>
+                        <a class="nav-link" href="/admin" style="color: white">{{__('homepage.header_adminpage')}}</a>
                     </li>
+                    @endif
+                    @if(session()->exists('user'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile" style="color: white">{{__('homepage.header_profile')}}</a>
+                        </li>
                     @endif
                 </ul>
             </div>
-            <div class="col-3">
-                <ul class="nav">
+            <div class="col">
+                <ul class="nav" style="margin-left: 20%">
                     <li class="nav-item">
                         <form action="locale" method="get">
                             <select class="nav-link" onchange="this.form.submit()" name="loc">
@@ -104,6 +106,7 @@
                                                 @endif
                                             </div>
                                             <div class="form-group form-check">
+
                                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name="rememberme">
                                                 <label class="form-check-label" for="exampleCheck1">{{__('homepage.label_rememberme')}}</label>
                                             </div>
@@ -133,7 +136,7 @@
 
 
 <!-- Footer -->
-<footer class="text-white-50 bg-dark p-3">
+<footer class="text-white-50 bg-dark p-3" id="footer">
 
     <!-- Copyright -->
     <div class="text-center">© 2020 Copyright:

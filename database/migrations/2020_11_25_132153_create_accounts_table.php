@@ -6,28 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAccountsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
-//        Schema::create('accounts', function (Blueprint $table) {
-//            $table->id();
-//            $table->string("fullname");
-//            $table->string("login");
-//            $table->string("password");
-//            $table->bigInteger("phonenumber",false,false);
-//            $table->boolean("isadmin");
-//        });
+        Schema::create('accounts', function (Blueprint $table) {
+            $table->id();
+            $table->string("fullname");
+            $table->string("login");
+            $table->string("password");
+            $table->bigInteger("phonenumber",false,false);
+            $table->boolean("isadmin");
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('accounts');

@@ -9,6 +9,7 @@ return[
     'header_logout'=>'Logout',
     'header_send_request'=>'Send A Request',
     'header_adminpage'=>"Admin Page",
+    'header_profile'=>"Profile",
 
     'btn_login'=>'Log In',
     'btn_authorization'=>'Authorization',

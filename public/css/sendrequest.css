@@ -23,6 +23,11 @@ header select:hover{
     border-color: #1ec5e8;
     cursor: pointer;
 }
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 #section1 a{
     background-color: white;
     color: #a21a08;

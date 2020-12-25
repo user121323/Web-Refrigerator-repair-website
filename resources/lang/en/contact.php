@@ -7,5 +7,6 @@ return [
     'label_saturday'=>"Saturday:",
     'label_sunday'=>"Sunday:",
     'label_weekend'=>"weekend",
+    'btn_sendapplication' => "Send Application",
 
 ];

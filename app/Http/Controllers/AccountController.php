@@ -11,6 +11,10 @@ class AccountController extends Controller
 {
     public function index(){
         $current_lang = session('locale');
+        $login = "";
+        $password = "";
+        $remeberme = "";
+
 
         if ($current_lang==null){
             $loc = 'en';
@@ -74,8 +78,9 @@ class AccountController extends Controller
             $result = "success";
 
             if ($rememberme!=null){
-                setcookie('login', $login, 3600);
-                setcookie('password', sha1($password), 3600);
+                setcookie('login', $login, time()+(3600*24*30));
+                setcookie('password', sha1($password), time()+(3600*24*30));
+                setcookie('rememberme', "true", time()+(3600*24*30));
             }
 
             session(['user' => $user]);
@@ -111,6 +116,88 @@ class AccountController extends Controller
             }
 
             return redirect('/admin/users');
+        }
+        return redirect("/registration");
+    }
+
+    public function profile(Request $request){
+        $current_lang = session('locale');
+        $result ="";
+        $result = $request->result;
+
+        $user = session("user");
+        if ($user!=null){
+
+            if ($current_lang==null){
+                $loc = 'en';
+                return redirect()->route('locale',compact("loc"));
+            }
+
+            $styles = "css/profile.css";
+
+            $languages = \Illuminate\Support\Facades\DB::table("languages")->where("code","!=",$current_lang)->get();
+            $current_locale = \Illuminate\Support\Facades\DB::table("languages")->where("code","=",$current_lang)->first();
+
+            return view("user.profile",compact('languages','current_locale',"styles","user","result"));
+        }
+        return redirect("/registration");
+    }
+
+    public function editFullname(Request $request){
+        $user = session("user");
+        if ($user!=null){
+            $fullname = $request->fullname;
+            $id = $request->uid;
+            $usercheck = DB::table('accounts')->where('id',$id)->first();
+            if ($usercheck!=null){
+                DB::table('accounts')->where('id',$id)->update(["fullname"=>$fullname]);
+                $user = DB::table('accounts')->where('id',$id)->first();
+                session(['user' => $user]);
+                return redirect("/profile?result=success");
+            }
+            return redirect("/profile");
+        }
+        return redirect("/registration");
+    }
+
+    public function editPhoneNumber(Request $request){
+        $user = session("user");
+        if ($user!=null){
+            $phonenumber = $request->phonenumber;
+            $id = $request->uid;
+            $usercheck = DB::table('accounts')->where('id',$id)->first();
+            if ($usercheck!=null){
+                DB::table('accounts')->where('id',$id)->update(["phonenumber"=>$phonenumber]);
+                $user = DB::table('accounts')->where('id',$id)->first();
+                session(['user' => $user]);
+                return redirect("/profile?result=success");
+            }
+
+            return redirect("/profile");
+        }
+        return redirect("/registration");
+    }
+
+    public function editPassword(Request $request){
+        $user = session("user");
+        if ($user!=null){
+            $oldpassword = sha1($request->oldpassword);
+            $newpassword = sha1($request->newpassword);
+            $newrepassword = sha1($request->newrepassword);
+            $id = $request->uid;
+
+            $usercheck = DB::table('accounts')->where('id',$id)->first();
+            if (strcmp($newpassword,$newrepassword)==0){
+                if ($usercheck!=null && strcmp($usercheck->password,$oldpassword)==0){
+                    DB::table('accounts')->where('id',$id)->update(["password"=>$newpassword]);
+                    $user = DB::table('accounts')->where('id',$id)->first();
+                    session(['user' => $user]);
+                    return redirect("/profile?result=success");
+                }
+                return redirect("/profile?result=invalidoldpasswrod");
+            }
+
+            return redirect("/profile?result=newpasswordsnotmatch");
         }
         return redirect("/registration");
     }

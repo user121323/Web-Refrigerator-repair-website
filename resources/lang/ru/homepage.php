@@ -5,10 +5,11 @@ return[
     'header_service'=>'Сервисы',
     'header_contacts'=>'Контакты',
     'header_aboutus'=>'О нас',
-    'header_feedback'=>'отзыв',
+    'header_feedback'=>'Отзыв',
     'header_logout'=>'Выход',
     'header_send_request'=>'Отправить Заявку ',
-    'header_adminpage'=>"Admin Page",
+    'header_adminpage'=>"Страница Администратора",
+    'header_profile'=>"Профиль",
 
     'btn_login'=>'Вход',
     'btn_authorization'=>'Авторизация',

@@ -2,6 +2,11 @@
 
 @section('content')
 
+    <div id="div_send_request">
+        <a href="/sendrequest" id="btn_send_request">
+            <i class="fas fa-tools"></i> {{ __("contact.btn_sendapplication") }}
+        </a>
+    </div>
     <!--Section 1-->
     <section id="section1">
         <div class="container contactnumbers mt-4">

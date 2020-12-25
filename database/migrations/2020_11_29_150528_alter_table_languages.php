@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class AlterTableLanguages extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::table('languages', function (Blueprint $table) {
@@ -18,11 +13,6 @@ class AlterTableLanguages extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::table('languages', function (Blueprint $table) {

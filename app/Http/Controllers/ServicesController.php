@@ -24,6 +24,7 @@ class ServicesController extends Controller
         $services = DB::table('services')->where("services_language_id",$current_locale->id)->get();
         return view('user.services',compact('languages','current_locale','styles','services'));
     }
+
     public function listservice(Request $request){
         if ($request->session()->exists('user') && $request->session()->get("user")->isadmin==1) {
             $services = DB::table('services')->get();
@@ -31,6 +32,7 @@ class ServicesController extends Controller
         }
         return redirect()->back();
     }
+
     public function addservice(Request $request){
         if ($request->session()->exists('user') && $request->session()->get("user")->isadmin==1) {
             $languages = DB::table('languages')->get();
@@ -39,12 +41,14 @@ class ServicesController extends Controller
         }
         return redirect()->back();
     }
+
     public function addservicepost(Request $request){
         if ($request->session()->exists('user') && $request->session()->get("user")->isadmin==1) {
             $name = $request->name;
             $description = $request->description;
             $price = $request->price;
-            DB::table('services')->insert(['name'=>$name, 'description'=>$description,"price"=>$price]);
+            $languageid = $request->languageid;
+            DB::table('services')->insert(['name'=>$name, 'description'=>$description,"price"=>$price,"services_language_id"=>$languageid]);
             return redirect('/admin/services');
         }
         return redirect()->back();

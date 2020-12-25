@@ -92,9 +92,17 @@ Route::middleware(['set_locale'])->group(function(){
 
     Route::get("/registration","App\Http\Controllers\AccountController@index");
 
+    Route::get("/profile","App\Http\Controllers\AccountController@profile");
+
     Route::post("/login","App\Http\Controllers\AccountController@login");
 
-    Route::post("/logout","App\Http\Controllers\AccountController@logout");
+    Route::get("/logout","App\Http\Controllers\AccountController@logout");
+
+    Route::post("/editfullname","App\Http\Controllers\AccountController@editFullname");
+
+    Route::post("/editphonenumber","App\Http\Controllers\AccountController@editPhoneNumber");
+
+    Route::post("/editpassword","App\Http\Controllers\AccountController@editPassword");
 
     Route::post("/sendfeedback", "App\Http\Controllers\ReviewsController@addFeedback");
 

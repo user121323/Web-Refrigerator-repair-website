@@ -2,6 +2,11 @@
 
 @section('content')
 
+    <div id="div_send_request">
+        <a href="/sendrequest" id="btn_send_request">
+            <i class="fas fa-tools"></i> {{ __("contact.btn_sendapplication") }}
+        </a>
+    </div>
     <section class="mt-5 mb-5">
         <div class="container">
             <div class="row">
@@ -22,7 +27,6 @@
                                     <input type="radio" id="star1" name="rate" value="1" />
                                     <label for="star1" title="text">1 star</label>
                                 </div>
-{{--                                <span class="small" style="color: red; margin-left: 5%; margin-top: 10%">* {{ __("feedback.label_rateme") }}</span>--}}
                             </div>
 
                             <textarea class="form-control" name="comment" rows="5" placeholder="{{ __("feedback.label_youcomment") }}"></textarea>
